@@ -1,0 +1,534 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+:root {
+    --border-32: 32px;
+    --border-16: 16px;
+    --border-24: 24px;
+    --border-8: 8px;
+
+    --FontTitle: 2.5rem;
+    --FontHeading: 2rem;
+    --FontText: 1.5rem;
+
+    --FontNunitoSans: "Nunito Sans", sans-serif;
+    --FontRubik: "Rubik", sans-serif;
+    --FontNotoSans: "Noto Sans", sans-serif;
+    --FontMulish: "Mulish", sans-serif;
+
+    --bg-color: rgb(11, 11, 11, 0.80);
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    font-size: var(--FontHeading);
+    font-family: var(--FontNunitoSans);
+    border-bottom: 2px solid white;
+    display: inline-block;
+    width: fit-content;
+}
+
+p, li, a {
+    font-size: var(--FontText);
+    font-family: var(--FontMulish);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.back-video {
+    position: relative;
+}
+
+.main-window {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-32);
+    border: 3px solid white;
+    background-color: var(--bg-color);
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-color: white;
+}
+
+.title {
+    font-size: var(--FontTitle);
+    font-weight: 700;
+    font-family: var(--FontNunitoSans);
+
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.bio-projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.self-photo {
+    border-radius: var(--border-16);
+    height: 30vh;
+    border: 3px solid white;
+    filter: brightness(75%);
+}
+
+.bio-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about,
+.bio-stack,
+.projects-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-line {
+    letter-spacing: 0.3px;
+    border-left: 2px solid grey;
+    padding-left: 12px;
+    font-style: italic;
+}
+
+.bio-activity {
+    display: flex;
+    gap: 2rem;
+}
+
+.stack-list,
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-link {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.project-link:hover::after {
+    width: 100%;
+}
+
+.add-window {
+    display: flex;
+    gap: 16px;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--border-16);
+    border: 3px solid white;
+    background-color: var(--bg-color);
+}
+
+.link {
+    height: 2.5vw;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+    transition: all 0.3s ease-in-out;
+    filter: brightness(1); 
+}
+
+.link:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.link:active {
+    transform: scale(0.95);
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-bg video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+/* Большие десктопы (1920px и выше) */
+@media screen and (min-width: 1920px) {
+    :root {
+        --FontTitle: 3rem;
+        --FontHeading: 2.2rem;
+        --FontText: 1.6rem;
+    }
+    
+    .main-window {
+        max-width: 1000px;
+        padding: 2.5rem 4rem;
+    }
+    
+    .self-photo {
+        height: 28vh;
+    }
+}
+
+/* Средние десктопы и ноутбуки (1280px - 1536px) */
+@media screen and (max-width: 1536px) and (min-width: 1281px) {
+    .main-window {
+        max-width: 750px;
+        padding: 2rem 2.5rem;
+    }
+    
+    .bio-projects {
+        gap: 2rem;
+    }
+
+}
+
+/* Маленькие ноутбуки и планшеты в landscape (1024px - 1280px) */
+@media screen and (max-width: 1280px) and (min-width: 1025px) {
+    :root {
+        --FontTitle: 2.2rem;
+        --FontHeading: 1.8rem;
+        --FontText: 1.3rem;
+    }
+    
+    .main-window {
+        max-width: 700px;
+        height: auto;
+    }
+    
+    .bio-projects {
+        gap: 1.5rem;
+    }
+    
+    .self-photo {
+        height: 24vh;
+    }
+}
+
+/* Планшеты (768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    :root {
+        --FontTitle: 2rem;
+        --FontHeading: 1.6rem;
+        --FontText: 1.2rem;
+    }
+    
+    .main {
+        gap: 15px;
+        padding: 20px;
+        height: auto;
+        min-height: 100vh;
+        justify-content: center;
+    }
+    
+    .main-window {
+        max-width: 90%;
+        height: auto;
+        padding: 1.5rem;
+    }
+    
+    .bio-projects {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .self-photo {
+        height: 20vh;
+    }
+    
+    .bio-info {
+        width: 100%;
+    }
+    
+    .bio-activity {
+        gap: 2rem;
+        justify-content: space-between;
+    }
+    
+    .add-window {
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .link {
+        height: 4vh;
+    }
+}
+
+/* Большие телефоны и маленькие планшеты (481px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 481px) {
+    :root {
+        --FontTitle: 1.8rem;
+        --FontHeading: 1.5rem;
+        --FontText: 1.1rem;
+    }
+    
+    .main {
+        gap: 15px;
+        padding: 15px;
+        height: auto;
+        min-height: 100vh;
+        justify-content: center;
+    }
+    
+    .main-window {
+        max-width: 95%;
+        height: auto;
+        padding: 1.2rem;
+    }
+    
+    .title {
+        margin-bottom: 1.2rem;
+    }
+    
+    .bio-projects {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    
+    .self-photo {
+        height: 20vh;
+    }
+    
+    .bio-info {
+        width: 100%;
+    }
+    
+    .bio-activity {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    
+    .bio-stack, .projects-container {
+        width: 100%;
+    }
+    
+    .stack-list, .projects-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .project-link {
+        padding: 4px 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+    }
+    
+    .add-window {
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .link {
+        height: 3.5vh;
+    }
+}
+
+/* Маленькие телефоны (320px - 480px) */
+@media screen and (max-width: 480px) {
+    :root {
+        --FontTitle: 1.5rem;
+        --FontHeading: 1.3rem;
+        --FontText: 1rem;
+        --border-32: 24px;
+        --border-16: 12px;
+    }
+    
+    .main {
+        gap: 10px;
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+        justify-content: center;
+    }
+    
+    .main-window {
+        max-width: 100%;
+        height: auto;
+        padding: 1rem;
+        border-width: 2px;
+    }
+    
+    .title {
+        margin-bottom: 1rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .bio-projects {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .self-photo {
+        height: 18vh;
+        border-width: 2px;
+    }
+    
+    .bio-info {
+        width: 100%;
+    }
+    
+    .bio-line {
+        padding-left: 8px;
+        font-size: 0.95rem;
+    }
+    
+    .bio-activity {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .bio-stack, .projects-container {
+        width: 100%;
+    }
+    
+    h2 {
+        margin-bottom: 0.3rem;
+        border-bottom-width: 1px;
+    }
+    
+    .stack-list, .projects-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    
+    .stack-list li, .project-link {
+        font-size: 0.9rem;
+        padding: 3px 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+    }
+    
+    .project-link {
+        width: auto;
+    }
+    
+    .add-window {
+        gap: 12px;
+        padding: 0.5rem 1rem;
+        border-width: 2px;
+    }
+    
+    .link {
+        height: 3vh;
+    }
+}
+
+/* Для очень больших экранов (4K и выше) */
+@media screen and (min-width: 2560px) {
+    :root {
+        --FontTitle: 4rem;
+        --FontHeading: 2.8rem;
+        --FontText: 2rem;
+    }
+    
+    .main-window {
+        max-width: 1400px;
+        padding: 3rem 5rem;
+    }
+    
+    .self-photo {
+        height: 40vh;
+    }
+    
+    .add-window {
+        padding: 1rem 2.5rem;
+    }
+    
+    .link {
+        height: 6vh;
+    }
+}
+
+
+/* ===== ПЛАВНЫЕ ПЕРЕХОДЫ ===== */
+
+.main-window,
+.self-photo,
+.add-window,
+.link,
+h1, h2, p, li, a {
+    transition: all 0.25s ease;
+}
+
+.bio-projects,
+.bio-activity {
+    transition: 
+        flex-direction 0.3s ease,
+        gap 0.3s ease;
+}
+
+.video-bg,
+.video-bg video {
+    transition: none;
+}
+
+.project-link::after {
+    transition: width 0.3s ease;
+}
+
+.link:hover {
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
