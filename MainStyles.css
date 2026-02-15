@@ -92,7 +92,6 @@ p, li, a {
     border-radius: var(--border-16);
     height: 30vh;
     border: 3px solid white;
-    filter: brightness(75%);
 }
 
 .bio-info {
@@ -157,8 +156,8 @@ p, li, a {
     background-color: var(--bg-color);
 }
 
-.link {
-    height: 2.5vw;
+.social-link {
+    height: 3vw;
     background-color: white;
     border: 1px solid white;
     border-radius: 100%;
@@ -166,13 +165,13 @@ p, li, a {
     filter: brightness(1); 
 }
 
-.link:hover {
+.social-link:hover {
     transform: scale(1.15);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
     border-color: rgba(255, 255, 255, 0.8);
 }
 
-.link:active {
+.social-link:active {
     transform: scale(0.95);
 }
 
@@ -239,6 +238,13 @@ p, li, a {
         gap: 2rem;
     }
 
+    .self-photo {
+        height: 27vh;
+    }
+
+    .social-link {
+        height: 4vw;
+    }
 }
 
 /* Маленькие ноутбуки и планшеты в landscape (1024px - 1280px) */
@@ -260,6 +266,10 @@ p, li, a {
     
     .self-photo {
         height: 24vh;
+    }
+
+    .social-link {
+        height: 4.75vw;
     }
 }
 
@@ -307,8 +317,8 @@ p, li, a {
         padding: 0.75rem 1.5rem;
     }
     
-    .link {
-        height: 4vh;
+    .social-link {
+        height: 5.5vw;
     }
 }
 
@@ -376,8 +386,8 @@ p, li, a {
         padding: 0.6rem 1.2rem;
     }
     
-    .link {
-        height: 3.5vh;
+    .social-link {
+        height: 7vw;
     }
 }
 
@@ -467,8 +477,8 @@ p, li, a {
         border-width: 2px;
     }
     
-    .link {
-        height: 3vh;
+    .social-link {
+        height: 10vw;
     }
 }
 
@@ -493,7 +503,7 @@ p, li, a {
         padding: 1rem 2.5rem;
     }
     
-    .link {
+    .social-link {
         height: 6vh;
     }
 }
@@ -504,7 +514,7 @@ p, li, a {
 .main-window,
 .self-photo,
 .add-window,
-.link,
+.social-link,
 h1, h2, p, li, a {
     transition: all 0.25s ease;
 }
@@ -525,7 +535,7 @@ h1, h2, p, li, a {
     transition: width 0.3s ease;
 }
 
-.link:hover {
+.social-link:hover {
     transition: all 0.2s ease-in-out;
 }
 
