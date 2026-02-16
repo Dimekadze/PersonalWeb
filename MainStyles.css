@@ -207,9 +207,9 @@ p, li, a {
 
 
 
-/* ===== АДАПТИВНОСТЬ ===== */
+/* адаптивность */
 
-/* Большие десктопы (1920px и выше) */
+/* (1920px и выше) */
 @media screen and (min-width: 1920px) {
     :root {
         --FontTitle: 3rem;
@@ -227,7 +227,7 @@ p, li, a {
     }
 }
 
-/* Средние десктопы и ноутбуки (1280px - 1536px) */
+/* (1280px - 1536px) */
 @media screen and (max-width: 1536px) and (min-width: 1281px) {
     .main-window {
         max-width: 750px;
@@ -239,7 +239,7 @@ p, li, a {
     }
 
     .self-photo {
-        height: 27vh;
+        height: 18vw;
     }
 
     .social-link {
@@ -247,7 +247,7 @@ p, li, a {
     }
 }
 
-/* Маленькие ноутбуки и планшеты в landscape (1024px - 1280px) */
+/* (1024px - 1280px) */
 @media screen and (max-width: 1280px) and (min-width: 1025px) {
     :root {
         --FontTitle: 2.2rem;
@@ -265,7 +265,7 @@ p, li, a {
     }
     
     .self-photo {
-        height: 24vh;
+        height: 20vw;
     }
 
     .social-link {
@@ -273,7 +273,7 @@ p, li, a {
     }
 }
 
-/* Планшеты (768px - 1024px) */
+/* (768px - 1024px) */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
     :root {
         --FontTitle: 2rem;
@@ -301,7 +301,7 @@ p, li, a {
     }
     
     .self-photo {
-        height: 20vh;
+        height: 28vw;
     }
     
     .bio-info {
@@ -322,7 +322,7 @@ p, li, a {
     }
 }
 
-/* Большие телефоны и маленькие планшеты (481px - 767px) */
+/* (481px - 767px) */
 @media screen and (max-width: 767px) and (min-width: 481px) {
     :root {
         --FontTitle: 1.8rem;
@@ -354,7 +354,7 @@ p, li, a {
     }
     
     .self-photo {
-        height: 20vh;
+        height: 32vw;
     }
     
     .bio-info {
@@ -391,7 +391,7 @@ p, li, a {
     }
 }
 
-/* Маленькие телефоны (320px - 480px) */
+/* (320px - 480px) */
 @media screen and (max-width: 480px) {
     :root {
         --FontTitle: 1.5rem;
@@ -427,7 +427,7 @@ p, li, a {
     }
     
     .self-photo {
-        height: 18vh;
+        height: 32vw;
         border-width: 2px;
     }
     
@@ -482,7 +482,7 @@ p, li, a {
     }
 }
 
-/* Для очень больших экранов (4K и выше) */
+/* (4K и выше) */
 @media screen and (min-width: 2560px) {
     :root {
         --FontTitle: 4rem;
@@ -509,7 +509,7 @@ p, li, a {
 }
 
 
-/* ===== ПЛАВНЫЕ ПЕРЕХОДЫ ===== */
+/* плавные переходы */
 
 .main-window,
 .self-photo,
