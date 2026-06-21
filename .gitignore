@@ -1,0 +1,21 @@
+# Binaries
+# Go build artifacts
+bin/
+build/
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.drawio
+*.bkp
+
+# Folders
+tests/
+__pycache__/
+
+# Secrets & Config (keep templates, ignore actual secrets)
+.env
+config/config.json
+

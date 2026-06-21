@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+:root {
+    --border-32: 32px;
+    --border-16: 16px;
+    --border-24: 24px;
+    --border-8: 8px;
+
+    --FontTitle: 2.5rem;
+    --FontHeading: 2rem;
+    --FontText: 1.5rem;
+
+    --FontNunitoSans: "Nunito Sans", sans-serif;
+    --FontRubik: "Rubik", sans-serif;
+    --FontNotoSans: "Noto Sans", sans-serif;
+    --FontMulish: "Mulish", sans-serif;
+
+    --bg-color: rgb(11, 11, 11, 0.80);
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    font-size: var(--FontHeading);
+    font-family: var(--FontNunitoSans);
+    border-bottom: 2px solid white;
+    display: inline-block;
+    width: fit-content;
+}
+
+p, li, a {
+    font-size: var(--FontText);
+    font-family: var(--FontMulish);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.back-video {
+    position: relative;
+}
+
+.main-window {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-32);
+    border: 2px solid white;
+    background-color: var(--bg-color);
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-color: white;
+}
+
+.title {
+    font-size: var(--FontTitle);
+    font-weight: 700;
+    font-family: var(--FontNunitoSans);
+
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.bio-projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.self-photo {
+    border-radius: var(--border-16);
+    border: 2px solid white;
+    height: 250px; 
+    width: auto;
+    object-fit: cover;
+}
+
+.bio-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about,
+.bio-stack,
+.projects-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-line {
+    letter-spacing: 0.3px;
+    border-left: 2px solid grey;
+    padding-left: 12px;
+    font-style: italic;
+}
+
+.bio-activity {
+    display: flex;
+    gap: 2rem;
+}
+
+.stack-list,
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-link {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.project-link:hover::after {
+    width: 100%;
+}
+
+.add-window {
+    display: flex;
+    gap: 16px;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--border-16);
+    border: 2px solid white;
+    background-color: var(--bg-color);
+}
+
+.social-link {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    transition: 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.social-link:active {
+    transform: scale(0.95);
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-bg video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    background-color: #0f0f0f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.loader-greeting {
+    font-family: var(--FontNunitoSans);
+    font-size: var(--FontTitle);
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-bottom: none;
+    margin: 0;
+    animation: pulse 1.5s infinite alternate;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { 
+        transform: rotate(360deg); 
+    }
+}
+
+@keyframes pulse {
+    from { 
+        opacity: 0.5;
+    }
+    to { 
+        opacity: 1;
+    }
+}
+
+.page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}

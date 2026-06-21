@@ -7,13 +7,20 @@
     <link rel="icon" type="image/svg+xml" href="img/logo_512.png">
     <link rel="apple-touch-icon" href="img/logo_32.png">
     <link rel="manifest" href="img/logo_192.png">
-    <link rel="stylesheet" href="MainStyles.css">
-    <script src="MainFunc.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <script src="main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <h2 class="loader-greeting">Welcome</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
     <main class="main">
         <figure class="video-bg">
             <video autoplay loop muted playsinline>
@@ -26,7 +33,7 @@
             <div class="bio-container">
                 <h1 class="title">Good to see you, I'm Dima</h1>
                 <div class="bio-projects">
-                    <img src="img/dorian.jpg" alt="me" class="self-photo">
+                    <img src="img/dorian2.jpg" alt="me" class="self-photo">
                     <div class="bio-info">
                         <div class="about">
                             <h2>About me</h2>
@@ -45,7 +52,7 @@
                                 <h2>My projects</h2>
                                 <ul class="projects-list">
                                     <a class="project-link" href="https://github.com/Dimekadze/PassGen" target="_blank">PassGen</a>
-                                    <a class="project-link" href="https://github.com/Dimekadze/TKey" target="_blank">Tkey</a>
+                                    <a class="project-link" href="https://github.com/Dimekadze/EMP" target="_blank">EMP</a>
                                     <a class="project-link" href="https://github.com/Dimekadze/VDP" target="_blank">VDP</a>
                                 </ul>
                             </div>
@@ -57,7 +64,8 @@
 
         <aside class="add-window">
             <a href="https://t.me/Dimekadze" target="_blank"><img src="img/telegram.svg" alt="tg link" class="social-link"></a>
-            <a href="https://github.com/Dimekadze" target="_blank"><img src="img/github.svg" alt="tg link" class="social-link"></a>
+            <a href="https://codepen.io/Dimekadze" target="_blank"><img src="img/codepen.svg" alt="codepen link" class="social-link"></a>
+            <a href="https://github.com/Dimekadze" target="_blank"><img src="img/github.svg" alt="github link" class="social-link"></a>
         </aside>
     </main>
 </body>
