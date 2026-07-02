@@ -222,7 +222,6 @@ p, li, a {
     width: 100%;
 }
 
-
 .add-window,
 .settings-window {
     display: flex;
@@ -281,20 +280,6 @@ p, li, a {
     transform: translate(-50%, -50%);
     object-fit: cover;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .page-loader {
     position: fixed;
@@ -405,8 +390,9 @@ p, li, a {
 }
 
 .symbols {
-    height: 50px;
+    height: 60px;
     border: 2px solid var(--border-color);
     border-radius: var(--border-8);
-    opacity: 0.5;
+    background-color: var(--bg-color);
+    padding: 1rem;
 }
