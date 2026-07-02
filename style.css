@@ -198,6 +198,7 @@ p, li, a {
     align-items: center;
     justify-content: center;
     gap: 25px;
+    width: 100%;
 }
 
 .project-link {
@@ -356,7 +357,8 @@ p, li, a {
 .project-photo {
     position: relative;
     height: 230px;
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     overflow: hidden;
     border: 2px solid var(--border-color);
     border-radius: var(--border-8);
