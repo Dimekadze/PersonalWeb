@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
             loader.classList.add("hidden");
         }, 600); 
     };
-
+    
     if (video) {
         if (video.readyState >= 3) {
             hideLoader();

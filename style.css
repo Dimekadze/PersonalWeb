@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+    /* border: 1px solid red; */
 }
 
 :root {
@@ -12,6 +13,7 @@
     --border-16: 16px;
     --border-24: 24px;
     --border-8: 8px;
+    --border-4: 4px;
 
     --FontTitle: 2.5rem;
     --FontHeading: 2rem;
@@ -23,16 +25,20 @@
     --FontMulish: "Mulish", sans-serif;
 
     --bg-color: rgb(11, 11, 11, 0.80);
+    --text-color: white;
+    --border-color: white;
 }
 
-h2 {
-    margin-bottom: 0.5rem;
-    font-size: var(--FontHeading);
-    font-family: var(--FontNunitoSans);
-    border-bottom: 2px solid white;
-    display: inline-block;
-    width: fit-content;
+body {
+    background-color: #1a1a1a;
+    color: var(--text-color);
 }
+
+.main-window, .projects-window, .add-window, .settings-window, .title {
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+}
+
 
 p, li, a {
     font-size: var(--FontText);
@@ -42,55 +48,86 @@ p, li, a {
 .main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    gap: 25px;
+    min-height: 100vh;
+    padding: 2rem;
+    position: relative;
 }
 
 .back-video {
     position: relative;
 }
 
+.top-windows {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 50px;
+    width: 100%;
+    max-width: 1650px;
+}
+
 .main-window {
-    padding: 2rem 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--border-32);
-    border: 2px solid white;
-    background-color: var(--bg-color);
+    gap: 25px;
+    padding: 2rem;
+    border-radius: var(--border-16);
+    border: 2px solid var(--border-color);
+    flex: 1;
+    overflow: hidden;
 }
 
-.bio-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-color: white;
-}
-
-.title {
-    font-size: var(--FontTitle);
-    font-weight: 700;
-    font-family: var(--FontNunitoSans);
-
-    letter-spacing: 1px;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.bio-projects {
+.about {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3rem;
+}
+
+.projects-window {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border-radius: var(--border-16);
+    border: 2px solid var(--border-color);
+    flex: 1;
+    overflow: hidden;
+}
+
+.projects-title {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+}
+
+.title-text {
+    letter-spacing: 0.3px;
+    font-style: italic;
+    text-align: center;
+    margin: auto;
+}
+
+.title {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-16);
+    padding: 0.35rem 1.75rem;
+    color: var(--text-color);
+    font-size: var(--FontTitle);
+    font-weight: 700;
+    font-family: var(--FontNunitoSans);
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .self-photo {
     border-radius: var(--border-16);
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     height: 250px; 
     width: auto;
     object-fit: cover;
@@ -98,34 +135,69 @@ p, li, a {
 
 .bio-info {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.about,
 .bio-stack,
 .projects-container {
     display: flex;
     flex-direction: column;
 }
 
-.bio-line {
+.bio-stack {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.bio-text {
     letter-spacing: 0.3px;
-    border-left: 2px solid grey;
-    padding-left: 12px;
     font-style: italic;
+    text-align: center;
+    margin: auto;
 }
 
 .bio-activity {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin: auto;
 }
 
-.stack-list,
-.projects-list {
+.bio-activity h2 {
+    position: relative;
+    margin-bottom: 5px;
+    font-size: var(--FontHeading);
+    font-family: var(--FontNunitoSans);
+    border-bottom: none; 
+}
+
+.bio-activity h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 20rem;
+    height: 3px;
+    background-color: white;
+    margin-left: 0;
+    transform: translateX(-50%);
+}
+
+.stack-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.projects-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
 }
 
 .project-link {
@@ -149,21 +221,31 @@ p, li, a {
     width: 100%;
 }
 
-.add-window {
+
+.add-window,
+.settings-window {
     display: flex;
     gap: 16px;
-    padding: 0.75rem 1.75rem;
+    padding: 0.5rem 1.5rem;
     border-radius: var(--border-16);
-    border: 2px solid white;
-    background-color: var(--bg-color);
+    border: 2px solid var(--border-color);
+    width: fit-content;
+    align-self: center;
+}
+
+.settings-window {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.color-mode {
+    all: unset;
+    cursor: pointer;
 }
 
 .social-link {
-    background-color: white;
-    border: 1px solid white;
     border-radius: 50%;
-    height: 48px;
-    width: 48px;
     transition: 0.3s ease-in-out;
 }
 
@@ -198,6 +280,20 @@ p, li, a {
     transform: translate(-50%, -50%);
     object-fit: cover;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .page-loader {
     position: fixed;
@@ -255,4 +351,60 @@ p, li, a {
 .page-loader.hidden {
     opacity: 0;
     visibility: hidden;
+}
+
+
+
+
+
+
+
+.project-photo {
+    position: relative;
+    height: 230px;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-8);
+}
+
+.project-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.project-photo:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-text {
+    color: white;
+    font-family: var(--FontMulish);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.symbols {
+    height: 50px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-8);
+    opacity: 0.5;
 }

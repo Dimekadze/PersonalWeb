@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimekadze</title>
-    <link rel="icon" type="image/svg+xml" href="img/logo_512.png">
+
+    <meta name="description" content="Personal portfolio of Dima (Dimekadze). AI/ML, Frontend, and Linux enthusiast. 21 y/o writing code, not poetry.">
+    <meta name="keywords" content="Dimekadze, web developer, AI, ML, Frontend, Linux, portfolio">
+    <meta name="author" content="Dima">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dimekadze.ru/">
+    <meta property="og:title" content="Dimekadze | Personal Portfolio">
+    <meta property="og:description" content="Writing code, not poetry 🥀 AI/ML & Frontend developer.">
+    <meta property="og:image" content="https://dimekadze.ru/img/dorian2.jpg">
+
+    <link rel="icon" type="image/png" href="img/logo_512.png">
     <link rel="apple-touch-icon" href="img/logo_32.png">
-    <link rel="manifest" href="img/logo_192.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
     <script src="main.js"></script>
@@ -23,50 +33,97 @@
     </div>
     <main class="main">
         <figure class="video-bg">
-            <video autoplay loop muted playsinline>
+                <video autoplay loop muted playsinline>
                 <source src="video/bg-vid-cut.mp4" type="video/mp4">
                 Ваш браузер не поддерживает видео.
             </video>
         </figure>
-
-        <section class="main-window">
-            <div class="bio-container">
-                <h1 class="title">Good to see you, I'm Dima</h1>
-                <div class="bio-projects">
+        <h1 class="title">Good to see you, I'm Dima</h1>
+        <div class="top-windows">
+            <section class="main-window">
+                <div class="about">
+                    <h2 class="title">About me</h2>
+                    <p class="bio-text">21 y/o writing code, not poetry 🥀</p>
+                </div>
+                <div class="bio-info">
                     <img src="img/dorian2.jpg" alt="me" class="self-photo">
-                    <div class="bio-info">
-                        <div class="about">
-                            <h2>About me</h2>
-                            <p class="bio-line">21 y/o writing code, not poetry 🥀</p>
-                        </div>
-                        <div class="bio-activity">
-                            <div class="bio-stack">
-                                <h2>My interests</h2>
-                                <ul class="stack-list">
-                                    <li>AI/ML</li>
-                                    <li>Frontend</li>
-                                    <li>Linux</li>
-                                </ul>
-                            </div>
-                            <div class="projects-container">
-                                <h2>My projects</h2>
-                                <ul class="projects-list">
-                                    <a class="project-link" href="https://github.com/Dimekadze/PassGen" target="_blank">PassGen</a>
-                                    <a class="project-link" href="https://github.com/Dimekadze/EMP" target="_blank">EMP</a>
-                                    <a class="project-link" href="https://github.com/Dimekadze/VDP" target="_blank">VDP</a>
-                                </ul>
-                            </div>
+                    <div class="bio-activity">
+                        <h2>Moving in</h2>
+                        <div class="bio-stack">
+                            <ul class="stack-list">
+                                <li>Data Analysis</li>
+                                <li>AI/ML</li>
+                                <li>CV</li>
+                            </ul>
+                            <ul class="stack-list">
+                                <li>Frontend</li>
+                                <li>UX/UI</li>
+                                <li>Linux</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section class="projects-window">
+                <div class="projects-title">
+                    <h2 class="title">My works</h2>
+                    <p class="title-text">I'm kind of a wizard myself</p>
+                </div>
+                <div class="projects-images">
+                    <div class="project-photo">
+                        <a href="https://github.com/Dimekadze/EMP" target="_blank">
+                            <img src="/img/emp-logo.svg" alt="Easy Music Player">
+                            <div class="image-overlay">
+                                <p class="image-text">Easy Music Player</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-photo">
+                        <a href="https://github.com/Dimekadze/VDP" target="_blank">
+                            <img src="/img/vdp-logo.svg" alt="Vehicle Detection and Prediction">
+                            <div class="image-overlay">
+                                <p class="image-text">Vehicle Detection and Prediction</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-photo">
+                        <a href="https://github.com/Dimekadze/PassGen" class="image-link" target="_blank">
+                            <img src="/img/passgen-logo.svg" alt="Password Generator">
+                            <div class="image-overlay">
+                                <p class="image-text">Password Generator</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <aside class="add-window">
-            <a href="https://t.me/Dimekadze" target="_blank"><img src="img/telegram.svg" alt="tg link" class="social-link"></a>
-            <a href="https://codepen.io/Dimekadze" target="_blank"><img src="img/codepen.svg" alt="codepen link" class="social-link"></a>
-            <a href="https://github.com/Dimekadze" target="_blank"><img src="img/github.svg" alt="github link" class="social-link"></a>
+            <a href="https://t.me/Dimekadze" target="_blank">
+                <svg class="social-link" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+                </svg>
+            </a>
+            <a href="https://github.com/Dimekadze" target="_blank">
+                <svg class="social-link" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+            </a>
+            <a href="https://codepen.io/Dimekadze" target="_blank">
+                <svg class="social-link" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 640 640">
+                    <path d="M566.3 223.7L332.3 67.7C324.3 62.8 315.8 62.7 307.7 67.7L73.7 223.7C67.7 227.7 64 234.8 64 242L64 398C64 405.1 67.7 412.3 73.7 416.3L307.7 572.3C315.7 577.2 324.2 577.3 332.3 572.3L566.3 416.3C572.3 412.3 576 405.2 576 398L576 242C576 234.9 572.3 227.7 566.3 223.7zM342 127.1L514.3 242L437.4 293.4L342 229.7L342 127.1zM298 127.1L298 229.7L202.6 293.4L125.7 242L298 127.1zM108 283.1L163.1 320L108 356.8L108 283.1zM298 512.8L125.7 398L202.6 346.6L298 410.3L298 512.8zM320 372L242.3 320L320 268L397.7 320L320 372zM342 512.9L342 410.3L437.4 346.6L514.3 398L342 512.9zM532 356.9L476.9 320L532 283.1L532 356.8z"/>
+                </svg>
+            </a>
+            <a href="mailto:dimab8371@gmail.com" target="_blank">
+                <svg class="social-link" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 640 640">
+                    <path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/>
+                </svg>
+            </a>
         </aside>
+        <img src="/img/symb.svg" alt="symb" class="symbols">
     </main>
 </body>
 </html>
