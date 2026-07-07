@@ -1,0 +1,353 @@
+@mixin desktop-4k {
+  @media screen and (min-width: 2560px) { @content; }
+}
+
+@mixin desktop-lg {
+  @media screen and (min-width: 1920px) and (max-width: 2559px) { @content; }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 1025px) and (max-width: 1536px) { @content; }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1024px) { @content; }
+}
+
+@mixin tablet-sm {
+  @media screen and (min-width: 481px) and (max-width: 767px) { @content; }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 480px) { @content; }
+}
+
+/* 4K и выше */
+@include desktop-4k {
+  :root {
+    --FontTitle: 4rem;
+    --FontHeading: 2.8rem;
+    --FontText: 2rem;
+  }
+  .top-windows {
+    max-width: 2100px;
+  }
+  .self-photo, .project-photo { 
+    height: 320px;
+  }
+  .social-link { 
+    height: 64px; 
+    width: 64px; 
+  }
+  .add-window { 
+    padding: 1rem 2.5rem; 
+  }
+}
+
+/* 1920px - 2559px */
+@include desktop-lg {
+  :root {
+    --FontTitle: 3rem;
+    --FontHeading: 2.2rem;
+    --FontText: 1.6rem;
+  }
+  .top-windows {
+    max-width: 1600px;
+  }
+  .self-photo, .project-photo { 
+    height: 240px; 
+  }
+  .social-link { 
+    height: 56px; 
+    width: 56px; 
+  }
+}
+
+@include laptop {
+  :root {
+    --FontTitle: 2.2rem;
+    --FontHeading: 1.8rem;
+    --FontText: 1.2rem;
+  }
+  
+  .project-photo {
+    height: 170px;
+  }
+  
+  .top-windows {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+
+    @media screen and (min-width: 1250px) {
+      .top-windows {
+        max-width: 1100px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+      .bio-info {
+        display: flex;
+        flex-direction: row;
+      }
+      .project-photo {
+        height: 170px;
+      }
+    }
+  }
+
+  .main-window, .projects-window {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .bio-info {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .self-photo {
+    height: 170px;
+    object-fit: cover;
+    border-radius: var(--border-16);
+  }
+
+  .bio-activity {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* 768px - 1024px */
+@include tablet {
+  :root {
+    --FontTitle: 2rem;
+    --FontHeading: 1.6rem;
+    --FontText: 1.2rem;
+  }
+  .main {
+    gap: 15px;
+    padding: 20px;
+  }
+  .top-windows {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .main-window, .projects-window {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+  .about {
+    gap: 15px;
+  }
+  .bio-info {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%; 
+  }
+  .self-photo { 
+    height: 180px; 
+  }
+  .bio-activity {
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  .projects-images {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+  .project-photo {
+    flex: 1;
+    width: auto;
+    height: 160px;
+  }
+  .add-window { 
+    padding: 0.75rem 1.5rem; 
+  }
+  .social-link { 
+    height: 48px; 
+    width: 48px; 
+  }
+}
+
+/* 481px - 767px */
+@include tablet-sm {
+  :root {
+    --FontTitle: 1.8rem;
+    --FontHeading: 1.5rem;
+    --FontText: 1.1rem;
+  }
+  .main {
+    gap: 15px;
+    padding: 15px;
+    height: auto;
+    min-height: 100vh;
+  }
+  .top-windows {
+    max-width: 23rem;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main-window, .projects-window {
+    max-width: 95%;
+    padding: 1.2rem;
+  }
+  .about, .projects-title {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .bio-info {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%; 
+  }
+  .self-photo { 
+    width: 180px; 
+  }
+  .bio-activity {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .bio-block {
+    align-items: center;
+  }
+  .bio-line {
+    width: 260px;
+  }
+  .bio-stack { 
+    width: 100%; 
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .stack-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .bio-activity h2::after {
+    width: 15rem;
+  }
+  .projects-images {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .project-photo {
+    width: 180px;
+  }
+  .add-window { 
+    padding: 0.6rem 1.2rem; 
+  }
+  .social-link { 
+    height: 44px; 
+    width: 44px; 
+  }
+}
+
+/* <480px */
+@include mobile {
+  :root {
+    --FontTitle: 1.5rem;
+    --FontHeading: 1.3rem;
+    --FontText: 1rem;
+    --border-32: 24px;
+    --border-16: 12px;
+  }
+  .main {
+    gap: 10px;
+    padding: 10px;
+  }
+  .top-windows {
+    max-width: 20rem;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .bio-line {
+    width: 240px;
+  }
+  .main-window, .projects-window {
+    max-width: 100%;
+    padding: 1rem;
+    border-width: 2px;
+  }
+  .about, .projects-title {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .title {
+    letter-spacing: 0.5px;
+  }
+  .bio-info {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%; 
+  }
+  .self-photo { 
+    height: 160px; 
+  }
+  .bio-text {
+    font-size: 0.95rem;
+  }
+  .bio-activity {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .bio-block {
+    align-items: center;
+  }
+  h2 {
+    margin-bottom: 0.3rem;
+  }
+  .bio-activity h2::after {
+    width: 100%; 
+    max-width: 12rem;
+  }
+  .bio-stack { 
+    width: 100%; 
+    flex-direction: column;
+    gap: 10px;
+  }
+  .stack-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    
+    li {
+      font-size: 0.9rem;
+      padding: 3px 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+  .projects-images {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+  .project-photo {
+    width: 160px;
+  }
+  .add-window {
+    gap: 12px;
+    padding: 0.5rem 1rem;
+    border-width: 2px;
+  }
+  .social-link { 
+    height: 40px; 
+    width: 40px; 
+  }
+}
