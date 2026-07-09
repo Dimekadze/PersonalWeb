@@ -186,7 +186,6 @@
   h2 {
     font-size: var(--FontHeading);
     font-family: var(--FontNunitoSans);
-
   }
 }
 
@@ -335,13 +334,11 @@
 
 .social-link {
   color: white;
-  // border-radius: 40%;
   transition: 0.3s ease-in-out;
 }
 
 .social-link:hover {
   transform: scale(1.15);
-  // box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
   border-color: rgba(255, 255, 255, 0.8);
 }
 
