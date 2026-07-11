@@ -5,35 +5,35 @@ import passgenImg from '../assets/passgen-logo1.svg'
 function ProjectsWindow() {
   return (
     <>
-      <section className="projects-window">
-        <div className="projects-title">
+      <section className="projects__window">
+        <div className="projects__title">
           <h2 className="title">My works</h2>
-          <p className="title-text">It Ain't Much But It's Honest Work</p>
+          <a href="#" className='rainbow_link'>See More</a>
         </div>
-        <div className="projects-images">
-          <div className="project-photo">
+        <div className="projects__images">
+          <div className="project__photo">
             <a href="https://github.com/Dimekadze/EMP" target="_blank">
               <img src={empImg} alt="Easy Music Player"/>
-              <div className="image-overlay">
-                <p className="image-text">Easy Music Player</p>
+              <div className="image__overlay">
+                <p className="image__text">Easy Music Player</p>
               </div>
             </a>
           </div>
 
-          <div className="project-photo">
+          <div className="project__photo">
             <a href="https://github.com/Dimekadze/VDP" target="_blank">
               <img src={vdpImg} alt="Vehicle Detection and Prediction"/>
-              <div className="image-overlay">
-                <p className="image-text">Vehicle Detection and Prediction</p>
+              <div className="image__overlay">
+                <p className="image__text">Vehicle Detection and Prediction</p>
               </div>
             </a>
           </div>
 
-          <div className="project-photo">
-            <a href="https://github.com/Dimekadze/PassGen" className="image-link" target="_blank">
+          <div className="project__photo">
+            <a href="https://github.com/Dimekadze/PassGen" className="image__link" target="_blank">
               <img src={passgenImg} alt="Password Generator"/>
-              <div className="image-overlay">
-                <p className="image-text">Password Generator</p>
+              <div className="image__overlay">
+                <p className="image__text">Password Generator</p>
               </div>
             </a>
           </div>

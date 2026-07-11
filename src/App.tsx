@@ -5,8 +5,8 @@ import SelfWindow from './sections/SelfWindow';
 import ProjectsWindow from './sections/ProjectsWindow';
 import SocialLinks from './sections/SocialLinks';
 import Logo from './components/Logo'
-import './App.scss'
-import './Mixins.scss'
+import './styles/App.scss'
+import './styles/Mixins.scss'
 
 function App() {
   const mainVideoRef = useRef<HTMLVideoElement>(null);
@@ -16,8 +16,8 @@ function App() {
       <ScreenLoader videoRef={mainVideoRef} />
       <main className="main">
         <BgVideo/>
-        <h1 className="title-big">Good to see you, I'm Dima</h1>
-        <div className="top-windows">
+        <h1 className="title__big">Good to see you, I'm Dima</h1>
+        <div className="top__windows">
           <SelfWindow/>
           <ProjectsWindow/>
         </div>

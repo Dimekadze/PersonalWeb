@@ -36,11 +36,11 @@ function ScreenLoader({ videoRef }: ScreenLoaderProps) {
 
   return (
     <section 
-      id="page-loader" 
-      className={`page-loader ${!isVisible ? 'hidden' : ''}`}
+      id="page__loader" 
+      className={`page__loader ${!isVisible ? 'hidden' : ''}`}
     >
-      <div className="loader-content">
-        <h2 className="loader-greeting">Welcome</h2>
+      <div className="loader__content">
+        <h2 className="loader__greeting">Welcome</h2>
         <div className="spinner"></div>
       </div>
     </section>

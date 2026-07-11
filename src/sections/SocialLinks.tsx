@@ -4,21 +4,21 @@ import { IoMdMail } from 'react-icons/io';
 function SocialLinks() {
   return (
     <>
-      <aside className="social-links">
+      <aside className="social__links">
         <a href="https://t.me/Dimekadze" target="_blank" rel="noreferrer">
-          <FaTelegramPlane className="social-link" size={42} />
+          <FaTelegramPlane className="social__link" size={42} />
         </a>
         
         <a href="https://github.com/Dimekadze" target="_blank" rel="noreferrer">
-          <FaGithub className="social-link" size={42} />
+          <FaGithub className="social__link" size={42} />
         </a>
         
         <a href="https://codepen.io/Dimekadze" target="_blank" rel="noreferrer">
-          <FaCodepen className="social-link" size={42} />
+          <FaCodepen className="social__link" size={42} />
         </a>
         
         <a href="mailto:dimab8371@gmail.com" target="_blank" rel="noreferrer">
-          <IoMdMail className="social-link" size={42} />
+          <IoMdMail className="social__link" size={42} />
         </a>
       </aside>
     </>
