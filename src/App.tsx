@@ -7,6 +7,7 @@ import SocialLinks from './sections/SocialLinks';
 import Logo from './components/Logo'
 import './styles/App.scss'
 import './styles/Mixins.scss'
+// import BgCanvas from './components/BgCanvas';
 
 function App() {
   const mainVideoRef = useRef<HTMLVideoElement>(null);
@@ -15,6 +16,7 @@ function App() {
     <>
       <ScreenLoader videoRef={mainVideoRef} />
       <main className="main">
+        {/* <BgCanvas/> */}
         <BgVideo/>
         <h1 className="title__big">Good to see you, I'm Dima</h1>
         <div className="top__windows">

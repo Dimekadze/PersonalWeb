@@ -8,7 +8,7 @@ function ProjectsWindow() {
       <section className="projects__window">
         <div className="projects__title">
           <h2 className="title">My works</h2>
-          <a href="#" className='rainbow_link'>See More</a>
+          <a href="#" className='rainbow_link'><span>See More</span></a>
         </div>
         <div className="projects__images">
           <div className="project__photo">
