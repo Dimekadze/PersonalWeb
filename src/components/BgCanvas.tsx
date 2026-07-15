@@ -1,6 +1,6 @@
 function BgCanvas() {
-	let lines = [];
-	const line = 1;
+	// let lines = [];
+	// const line = 1;
 
 	
 
