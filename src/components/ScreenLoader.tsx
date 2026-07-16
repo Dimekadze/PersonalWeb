@@ -17,7 +17,7 @@ function ScreenLoader({ videoRef }: ScreenLoaderProps) {
     };
 
     if (video) {
-      if (video.readyState >= 3) {
+      if (video.readyState >= 0.5) {
         hideLoader();
       } else {
         video.addEventListener('canplaythrough', hideLoader);
